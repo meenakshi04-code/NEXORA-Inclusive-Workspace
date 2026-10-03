@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nx-primary: #4f46e5;
+  --color-nx-primary-hover: #4338ca;
+  --color-nx-bg: #f8fafc;
+  --color-nx-panel: #ffffff;
+  --color-nx-border: #e2e8f0;
+  --color-nx-text: #0f172a;
+  --color-nx-text-muted: #64748b;
+  --color-nx-success: #10b981;
+  --color-nx-warning: #f59e0b;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-nx-bg);
+  color: var(--color-nx-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* High Contrast mode classes to be toggled on root */
+.high-contrast {
+  --color-nx-bg: #000000;
+  --color-nx-panel: #111111;
+  --color-nx-border: #fbbf24;
+  --color-nx-text: #ffffff;
+  --color-nx-text-muted: #fbbf24;
+  --color-nx-primary: #fbbf24;
+  --color-nx-primary-hover: #f59e0b;
+}
+
+/* Dyslexia friendly mode */
+.dyslexia-friendly {
+  font-family: "OpenDyslexic", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+/* Monochrome mode */
+.monochrome {
+  filter: grayscale(100%);
+}
+
+@keyframes moveDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(300px); opacity: 0; }
+}
